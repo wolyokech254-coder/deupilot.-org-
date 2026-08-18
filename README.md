@@ -1,2 +1,2 @@
-# deupilot.-org-
+# deupilot.
 AI-powered payment recovery assistant
