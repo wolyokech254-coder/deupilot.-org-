@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecoverPay — Sign Up</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0b1220;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 420px;
+      background: #111a2b;
+      border: 1px solid #243044;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #9eabc0;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 7px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      border-radius: 8px;
+      border: 1px solid #344158;
+      background: #0b1220;
+      color: white;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #4ade80;
+      color: #07130b;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 20px;
+      color: #9eabc0;
+    }
+
+    a {
+      color: #4ade80;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h1>Create your account</h1>
+
+    <p class="subtitle">
+      Start recovering overdue payments smarter.
+    </p>
+
+    <form id="signupForm">
+
+      <label for="name">Full name</label>
+      <input
+        id="name"
+        type="text"
+        placeholder="Your name"
+        required
+      >
+
+      <label for="email">Email address</label>
+      <input
+        id="email"
+        type="email"
+        placeholder="you@example.com"
+        required
+      >
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="At least 8 characters"
+        minlength="8"
+        required
+      >
+
+      <button type="submit">
+        Create Account
+      </button>
+
+    </form>
+
+    <div class="links">
+      Already have an account?
+      <a href="login.html">Log in</a>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      alert("Authentication will be connected next.");
+    });
+  </script>
+
+</body>
+</html>
