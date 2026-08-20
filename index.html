@@ -117,58 +117,142 @@
       communicate with customers, and recover outstanding revenue.
     </p>
 
-    <a href="#login" class="button">Get Started</a>
-  </section>
-  <section id="login" style="padding: 60px 20px; max-width: 500px; margin: auto;">
-  <div class="card">
-    <h2 style="color: #38bdf8; margin-bottom: 20px;">Welcome to DuPilot</h2>
+    <section id="login" style="padding: 60px 20px; max-width: 500px; margin: auto;">
 
-    <p style="color: #cbd5e1; margin-bottom: 25px;">
-      Log in to manage your payment recovery.
+  <div class="card">
+
+    <h2 style="color: #38bdf8; text-align: center; margin-bottom: 10px;">
+      Welcome to DuPilot
+    </h2>
+
+    <p style="color: #cbd5e1; text-align: center; margin-bottom: 25px;">
+      Manage your payment recovery in one place.
     </p>
 
-    <input
-      type="email"
-      placeholder="Email address"
-      style="width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 8px; border: none;"
-    >
+    <!-- Tabs -->
+    <div style="display: flex; margin-bottom: 25px; border-bottom: 1px solid #475569;">
 
-    <input
-      type="password"
-      placeholder="Password"
-      style="width: 100%; padding: 14px; margin-bottom: 20px; border-radius: 8px; border: none;"
-    >
+      <button
+        onclick="showLogin()"
+        id="loginTab"
+        style="flex: 1; padding: 12px; background: #38bdf8; color: #082f49; border: none; font-weight: bold; border-radius: 8px 8px 0 0;">
+        Log In
+      </button>
 
-    <button
-      style="width: 100%; padding: 14px; background: #38bdf8; color: #082f49; border: none; border-radius: 8px; font-weight: bold; font-size: 16px;"
-    >
-      Log In
-    </button>
+      <button
+        onclick="showSignup()"
+        id="signupTab"
+        style="flex: 1; padding: 12px; background: transparent; color: white; border: none; font-weight: bold;">
+        Sign Up
+      </button>
+
+    </div>
+
+
+    <!-- LOGIN FORM -->
+
+    <div id="loginForm">
+
+      <input
+        type="email"
+        placeholder="Email address"
+        style="width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 8px; border: none;"
+      >
+
+      <input
+        type="password"
+        placeholder="Password"
+        style="width: 100%; padding: 14px; margin-bottom: 10px; border-radius: 8px; border: none;"
+      >
+
+      <p style="text-align: right; margin-bottom: 20px;">
+        <a href="#" style="color: #38bdf8;">
+          Forgot password?
+        </a>
+      </p>
+
+      <button
+        style="width: 100%; padding: 14px; background: #38bdf8; color: #082f49; border: none; border-radius: 8px; font-weight: bold; font-size: 16px;">
+        Log In
+      </button>
+
+    </div>
+
+
+    <!-- SIGN UP FORM -->
+
+    <div id="signupForm" style="display: none;">
+
+      <input
+        type="text"
+        placeholder="Full name"
+        style="width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 8px; border: none;"
+      >
+
+      <input
+        type="text"
+        placeholder="Business name"
+        style="width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 8px; border: none;"
+      >
+
+      <input
+        type="email"
+        placeholder="Email address"
+        style="width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 8px; border: none;"
+      >
+
+      <input
+        type="password"
+        placeholder="Create password"
+        style="width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 8px; border: none;"
+      >
+
+      <input
+        type="password"
+        placeholder="Confirm password"
+        style="width: 100%; padding: 14px; margin-bottom: 20px; border-radius: 8px; border: none;"
+      >
+
+      <button
+        style="width: 100%; padding: 14px; background: #38bdf8; color: #082f49; border: none; border-radius: 8px; font-weight: bold; font-size: 16px;">
+        Create Account
+      </button>
+
+    </div>
+
   </div>
-  </section>
 
-  <section class="features">
+</section>
 
-    <div class="card">
-      <h3>Track Payments</h3>
-      <p>
-        Keep track of unpaid invoices and outstanding customer balances.
-      </p>
-    </div>
 
-    <div class="card">
-      <h3>Smart Reminders</h3>
-      <p>
-        Generate professional payment reminders without wasting your time.
-      </p>
-    </div>
+<script>
 
-    <div class="card">
-      <h3>Recover Revenue</h3>
-      <p>
-        Stay on top of overdue payments and improve your business cash flow.
-      </p>
-    </div>
+function showLogin() {
+
+  document.getElementById("loginForm").style.display = "block";
+  document.getElementById("signupForm").style.display = "none";
+
+  document.getElementById("loginTab").style.background = "#38bdf8";
+  document.getElementById("loginTab").style.color = "#082f49";
+
+  document.getElementById("signupTab").style.background = "transparent";
+  document.getElementById("signupTab").style.color = "white";
+}
+
+
+function showSignup() {
+
+  document.getElementById("loginForm").style.display = "none";
+  document.getElementById("signupForm").style.display = "block";
+
+  document.getElementById("signupTab").style.background = "#38bdf8";
+  document.getElementById("signupTab").style.color = "#082f49";
+
+  document.getElementById("loginTab").style.background = "transparent";
+  document.getElementById("loginTab").style.color = "white";
+}
+
+      </script>
 
   </section>
 
